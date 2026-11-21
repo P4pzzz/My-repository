@@ -4,138 +4,395 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Samuel Gómez Guerra | Portafolio Profesional</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
-body{background:#0d1117;color:#e6edf3;line-height:1.7}
-.container{width:90%;max-width:1100px;margin:auto}
-header{text-align:center;padding:80px 0}
-.profile-photo{
-width:180px;height:180px;border-radius:50%;
-object-fit:cover;border:4px solid #58a6ff;
-box-shadow:0 0 25px rgba(88,166,255,.35);
-margin-bottom:20px
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
 }
-h1{font-size:3rem;color:#58a6ff}
-.subtitle{color:#9ba3af;margin:15px 0}
-.btn{
-display:inline-block;padding:14px 28px;
-background:linear-gradient(135deg,#1f6feb,#58a6ff);
-color:white;text-decoration:none;border:none;
-border-radius:12px;cursor:pointer;font-weight:bold;
-margin-top:20px
+
+body {
+    background: #0d1117;
+    color: #e6edf3;
+    line-height: 1.7;
 }
-section{padding:40px 0}
-h2{color:#58a6ff;margin-bottom:20px}
-.card{
-background:#161b22;border:1px solid #21262d;
-padding:25px;border-radius:18px;margin-bottom:20px
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
 }
-.socials{display:flex;justify-content:center;gap:25px;margin-top:25px}
-.socials a{color:#9ba3af;font-size:1.8rem}
-.socials a:hover{color:#58a6ff}
-footer{text-align:center;padding:30px;color:#8b949e;border-top:1px solid #21262d}
-ul{padding-left:20px}
-@media print{
-.btn,.socials{display:none}
-body{background:white;color:black}
-.card{background:white;border:1px solid #ccc}
-h1,h2{color:#1f6feb}
+
+header {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #58a6ff;
+    box-shadow: 0 0 25px rgba(88,166,255,.35);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #58a6ff;
+}
+
+.subtitle {
+    color: #9ba3af;
+    margin: 15px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(135deg,#1f6feb,#58a6ff);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(88,166,255,.3);
+}
+
+section {
+    padding: 40px 0;
+}
+
+h2 {
+    color: #58a6ff;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+h3 {
+    color: #79b8ff;
+    margin-bottom: 10px;
+}
+
+.card {
+    background: #161b22;
+    border: 1px solid #21262d;
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #388bfd;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.socials a {
+    color: #9ba3af;
+    font-size: 1.8rem;
+    transition: .3s;
+}
+
+.socials a:hover {
+    color: #58a6ff;
+    transform: translateY(-4px);
+}
+
+ul {
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #8b949e;
+    border-top: 1px solid #21262d;
+    margin-top: 40px;
+}
+
+/* Diseño adaptable a celulares */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Configuración para exportar a PDF */
+@media print {
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+
+    body {
+        background: white !important;
+        color: #222 !important;
+        font-size: 11pt;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    header {
+        padding: 25px 0;
+    }
+
+    .btn,
+    .socials {
+        display: none !important;
+    }
+
+    .card {
+        background: white !important;
+        color: #222 !important;
+        border: 1px solid #ddd;
+        box-shadow: none;
+        break-inside: avoid;
+    }
+
+    h1, h2, h3 {
+        color: #1f6feb !important;
+    }
+
+    section {
+        padding: 18px 0;
+    }
+
+    footer {
+        color: #555;
+    }
 }
 </style>
 </head>
+
 <body>
 
+<!-- PRESENTACIÓN -->
 <header class="container">
-<img src="foto.jpg" alt="Samuel Gómez Guerra" class="profile-photo">
-<h1>Samuel Gómez Guerra</h1>
-<p class="subtitle">Estudiante de Administración Tecnológica | Soporte Administrativo y Operativo</p>
 
-<button class="btn" onclick="window.print()">
-<i class="fas fa-file-pdf"></i> Exportar Portafolio a PDF
-</button>
+    <img src="foto.JPG"
+         alt="Fotografía de Samuel Gómez Guerra"
+         class="profile-photo">
 
-<div class="socials">
-<a href="https://www.linkedin.com/in/samuel-g%C3%B3mez-guerra/" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="https://www.instagram.com/gomez_47s/" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="mailto:samuelgomez061025@gmail.com"><i class="fas fa-envelope"></i></a>
-</div>
+    <h1>Samuel Gómez Guerra</h1>
+
+    <p class="subtitle">
+        Estudiante de Administración Tecnológica |
+        Soporte Administrativo y Operativo
+    </p>
+
+    <button class="btn" onclick="window.print()">
+        <i class="fas fa-file-pdf"></i>
+        Exportar Portafolio a PDF
+    </button>
+
+    <div class="socials">
+        <a href="https://www.linkedin.com/in/samuel-g%C3%B3mez-guerra/"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a href="https://www.instagram.com/gomez_47s/"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="mailto:samuelgomez061025@gmail.com"
+           aria-label="Correo electrónico">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
 </header>
 
+<!-- CONTACTO -->
 <section class="container">
-<h2>Contacto</h2>
-<div class="card">
-<p><strong>Correo:</strong> samuelgomez061025@gmail.com</p>
-<p><strong>Ubicación:</strong> Medellín, Colombia</p>
-</div>
+    <h2>Contacto</h2>
+
+    <div class="card">
+        <p><strong>Correo:</strong>
+        samuelgomez061025@gmail.com</p>
+
+        <p><strong>Ubicación:</strong>
+        Medellín, Colombia</p>
+    </div>
 </section>
 
+<!-- ACERCA DE MÍ -->
 <section class="container">
-<h2>Acerca de mí</h2>
-<div class="card">
-<p>Estudiante de Administración Tecnológica del Instituto Tecnológico Metropolitano (ITM), con interés en la gestión organizacional, optimización de procesos y aplicación de herramientas tecnológicas para la solución de problemas empresariales. Me caracterizo por mi responsabilidad, capacidad de adaptación y aprendizaje continuo.</p>
-</div>
+    <h2>Acerca de mí</h2>
+
+    <div class="card">
+        <p>
+            Estudiante de Administración Tecnológica del Instituto
+            Tecnológico Metropolitano (ITM), con experiencia en
+            servicio al cliente, apoyo administrativo y procesos
+            operativos. Poseo conocimientos en organización,
+            gestión de inventarios, fundamentos contables y
+            herramientas digitales. Me caracterizo por mi
+            capacidad de adaptación, aprendizaje continuo,
+            comunicación y orientación a la mejora de procesos.
+        </p>
+    </div>
 </section>
 
+<!-- FORMACIÓN -->
 <section class="container">
-<h2>Formación Profesional</h2>
-<div class="card">
-<p><strong>Instituto Tecnológico Metropolitano (ITM)</strong></p>
-<p>Administración Tecnológica</p>
-<p>Sexto semestre – Actualmente en curso</p>
-<p>Medellín, Colombia</p>
-</div>
+    <h2>Formación Profesional</h2>
+
+    <div class="card">
+        <h3>Administración Tecnológica</h3>
+        <p><strong>Instituto Tecnológico Metropolitano (ITM)</strong></p>
+        <p>Sexto semestre – Actualmente en curso</p>
+        <p>Medellín, Colombia</p>
+    </div>
 </section>
 
+<!-- CERTIFICACIONES -->
 <section class="container">
-<h2>Certificaciones y Cursos</h2>
-<div class="card">
-<ul>
-<li>Certificación de Inglés Nivel C1</li>
-<li>Asistencia a conferencias de Marketing</li>
-<li>Asistencia a conferencias sobre Modelos Empresariales</li>
-<li>Portugués en proceso de formación</li>
-</ul>
-</div>
+    <h2>Certificaciones y Cursos</h2>
+
+    <div class="card">
+        <ul>
+            <li>Certificación de inglés – Nivel C1.</li>
+            <li>Asistencia a conferencias de marketing.</li>
+            <li>Asistencia a conferencias sobre modelos empresariales.</li>
+            <li>Portugués – Nivel C1, certificación en proceso.</li>
+        </ul>
+    </div>
 </section>
 
+<!-- IDIOMAS -->
 <section class="container">
-<h2>Proyectos</h2>
+    <h2>Idiomas</h2>
 
-<div class="card">
-<h3>Proyecto Pasado</h3>
-<p>Diseño de plantillas de nómina, inventario y herramientas de apoyo contable para proyectos académicos.</p>
-</div>
-
-<div class="card">
-<h3>Proyecto Presente</h3>
-<p>Simulaciones financieras relacionadas con créditos hipotecarios mediante cuota fija, leasing y UVR.</p>
-</div>
-
-<div class="card">
-<h3>Proyecto Futuro</h3>
-<p>Desarrollo de soluciones administrativas y tecnológicas enfocadas en optimización de procesos, análisis de datos y mejora organizacional.</p>
-</div>
-
+    <div class="card">
+        <ul>
+            <li><strong>Español:</strong> Nativo.</li>
+            <li><strong>Inglés:</strong> C1 – Avanzado.</li>
+            <li><strong>Portugués:</strong> C1 – Avanzado (certificación en proceso).</li>
+        </ul>
+    </div>
 </section>
 
+<!-- PROYECTOS -->
 <section class="container">
-<h2>Experiencia Profesional</h2>
-<div class="card">
-<p><strong>Operator & Assistant — Serkulantas</strong></p>
-<p>2021 – Actualidad</p>
-<ul>
-<li>Atención al cliente.</li>
-<li>Apoyo operativo y administrativo.</li>
-<li>Control básico de inventarios.</li>
-<li>Gestión documental.</li>
-<li>Soporte en actividades diarias de operación.</li>
-</ul>
-</div>
+    <h2>Proyectos</h2>
+
+    <div class="card">
+        <h3>Proyecto pasado</h3>
+        <p>
+            Diseño de plantillas de nómina, inventario y herramientas
+            de apoyo contable para proyectos académicos.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Proyecto presente</h3>
+        <p>
+            Simulaciones financieras relacionadas con créditos
+            hipotecarios mediante cuota fija, leasing y UVR.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Proyecto futuro</h3>
+        <p>
+            Desarrollo de soluciones administrativas y tecnológicas
+            enfocadas en optimización de procesos, análisis de datos
+            y mejora organizacional.
+        </p>
+    </div>
 </section>
 
+<!-- EXPERIENCIA -->
+<section class="container">
+    <h2>Experiencia Profesional</h2>
+
+    <div class="card">
+        <h3>Auxiliar Operativo y de Ventas — Grupo Éxito</h3>
+
+        <p>
+            <strong>Trabajo temporal por vacaciones</strong> |
+            23 de junio – 5 de julio de 2026 |
+            Laureles, Medellín
+        </p>
+
+        <ul>
+            <li>
+                Atención y orientación a clientes en español,
+                inglés y portugués.
+            </li>
+            <li>
+                Manejo de caja y procesamiento de diferentes
+                medios de pago.
+            </li>
+            <li>
+                Realización de cierres y ajustes de caja.
+            </li>
+            <li>
+                Adaptación al software de punto de venta y
+                procedimientos operativos de la compañía.
+            </li>
+            <li>
+                Apoyo en la organización de carritos de compra
+                y reorganización de góndolas y exhibiciones
+                de productos en otra sede.
+            </li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Operador y Asistente — Serkulantas</h3>
+
+        <p><strong>2021 – Actualidad</strong></p>
+
+        <ul>
+            <li>Atención al cliente y apoyo en actividades operativas.</li>
+            <li>Organización y control básico de inventarios.</li>
+            <li>Apoyo en procesos administrativos y contables básicos.</li>
+            <li>Gestión documental y soporte en las operaciones diarias.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- PIE DE PÁGINA -->
 <footer>
-<p>© 2026 Samuel Gómez Guerra</p>
+    <p>© 2026 Samuel Gómez Guerra | Portafolio Profesional</p>
 </footer>
 
 </body>
